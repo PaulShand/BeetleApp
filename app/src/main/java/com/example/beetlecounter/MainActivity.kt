@@ -197,7 +197,7 @@ fun uploadImage(imagePath: String, context: Context, onSuccess: (Uri?, Int?) -> 
                 responseBody?.let {
                     val jsonResponse = JSONObject(it)
                     val processedFileUrl = jsonResponse.getString("processed_file_url")
-                    val fullUrl = "http://54.175.65.67:5000$processedFileUrl"
+                    val fullUrl = "<SERVER_IP>$processedFileUrl"
                     val beetleCount = jsonResponse.getInt("beetle_count")
                     Log.d("HTTP Request", "Processed image URL: $fullUrl")
 
